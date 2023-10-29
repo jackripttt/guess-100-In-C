@@ -18,15 +18,14 @@ int main() {
         printf("Enter your guess: ");
         scanf("%d", &guess);
         attempts++;
-        if (numberToGuess == "0") {
-            printf("Game Over! Try Again.\n");
         if (guess > numberToGuess) {
             printf("Too high! Try again.\n");
         } else if (guess < numberToGuess) {
             printf("Too low! Try again.\n");
         } else {
             printf("Congratulations! You guessed the number %d in %d attempts!\n", numberToGuess, attempts);
-        }
+        } else {
+            printf("Game Over! Try Again.\n");
     } while (guess != numberToGuess);
     
     return 0;
